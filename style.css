@@ -1,0 +1,291 @@
+/* Import fonts from Google Fonts */
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /* Colors */
+  /* Primary Colors */
+  --pale-blue: #e0e8ff;
+  --bright-blue: rgb(56, 41, 224);
+
+  /* Neutral Colors */
+  --very-pale-blue: #f5f7ff;
+  --desaturated-blue: #7280a7;
+  --dark-blue: #1f2f56;
+
+  /* Typography */
+  /* Body Copy */
+  --body-size: 1rem;
+
+  /* Font */
+  --font-family: "Red Hat Display", sans-serif, monospace;
+
+  /* Weights */
+  --normal-w: 500;
+  --bold-w: 700;
+  --black-w: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default wide view - Desktop 1440px */
+
+body {
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: var(--very-pale-blue);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-family);
+}
+
+h1,
+h4 {
+  font-weight: var(--black-w);
+
+  color: var(--dark-blue);
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-weight: var(--normal-w);
+
+  line-height: 1.5rem;
+
+  color: var(--desaturated-blue);
+}
+
+.patterns-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1;
+}
+
+.patterns-div img {
+  width: 100%;
+}
+
+.card-div {
+  width: 360px;
+  height: auto;
+  min-height: 635px;
+
+  border-radius: 15px;
+
+  box-shadow: 0px 80px 320px rgba(56, 41, 224, 0.25);
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 2;
+}
+
+.card-header {
+  height: auto;
+  min-height: 220px;
+  width: 100%;
+
+  border-radius: 15px 15px 0px 0px;
+
+  background-image: url(images/illustration-hero.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card-body {
+  height: auto;
+  min-height: 415px;
+
+  background-color: #fff;
+
+  padding: 2rem;
+
+  border-radius: 0px 0px 15px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-summary {
+  width: 100%;
+  height: auto;
+
+  text-align: center;
+}
+
+.card-pricing {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 1.3rem;
+
+  margin: 1.5rem 0;
+
+  background-color: var(--very-pale-blue);
+
+  border-radius: 15px;
+}
+
+.card-pricing a:hover {
+  text-decoration: none;
+}
+
+.price-div {
+  display: flex;
+  align-items: center;
+
+  width: auto;
+  height: 100%;
+}
+
+.price-detail {
+  margin-left: 1rem;
+}
+
+.price-div a,
+.card-buttons a {
+  font-weight: var(--bold-w);
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-buttons a {
+  width: 100%;
+  height: auto;
+
+  padding: 0.8rem;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: var(--desaturated-blue);
+
+  border-radius: 8px;
+}
+
+.card-buttons a.primary {
+  background-color: var(--bright-blue);
+
+  margin-bottom: 0.8rem;
+
+  box-shadow: 7px 16px 35px 2px rgba(56, 41, 224, 0.35);
+
+  color: #fff;
+}
+
+.card-buttons a.primary:hover {
+  opacity: 0.5;
+}
+
+.card-buttons a.secondary:hover {
+  color: var(--dark-blue);
+}
+
+#desktop-pattern {
+  display: block;
+}
+
+#mobile-pattern {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/* Mobile : 375px  */
+@media only screen and (max-width: 375px) {
+  #desktop-pattern {
+    display: none;
+  }
+
+  #mobile-pattern {
+    display: block;
+  }
+
+  .card-div {
+    width: 310px;
+    height: 550px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  a {
+    font-size: 0.95rem;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .attribution,
+  .attribution a {
+    font-size: 9px;
+  }
+}
+
+/* Mobile : 320px  */
+@media only screen and (max-width: 320px) {
+  .card-div {
+    width: 270px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  a {
+    font-size: 0.75rem;
+  }
+
+  h4 {
+    font-size: 0.7rem;
+  }
+
+  .price-detail {
+    margin-left: 0.8rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
